@@ -2,9 +2,24 @@
 
 ### Requirements
 
-- Python
-- Virtualenv
-- NPM (JavaScript Framework)
+- Python (Installing python3.7 for Win here --> https://phoenixnap.com/kb/how-to-install-python-3-windows)
+- Pip (Installing Pip for windows --> https://phoenixnap.com/kb/install-pip-windows)
+- Virtual environment (Installiing Virtualenv for Windows here -->
+                       https://mothergeopy.readthedocs.io/en/latest/development/how-to/venv-win.html)
+- NPM (JavaScript Framework)(Installing node for Win --> https://www.guru99.com/download-install-node-js.html)
+
+### Database Technologies
+- Postgresql
+- google cloud proxy for interacting with staging/prod databases
+- Before you can develop, you'll need to install all the things.
+
+First: Docker and docker compose: TODO
+
+Then you'll need to get the backend up and running:
+
+sudo apt install postgresql-server-dev-all
+
+Then the frontend
 
 ### Run the application
 You will need two terminals pointed to the frontend and backend directories to start the servers for this application.
