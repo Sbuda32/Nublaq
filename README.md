@@ -31,3 +31,6 @@ You will need two terminals pointed to the frontend and backend directories to s
 - (React)[https://reactjs.org/] - A progressive JavaScript framework.
 - Python - A programming language that lets you work quickly and integrate systems more effectively.
 - Django - A high-level Python Web framework that encourages rapid development and clean, pragmatic design.
+
+
+# On Windows use `env\Scripts\activate`
