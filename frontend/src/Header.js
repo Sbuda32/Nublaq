@@ -7,6 +7,11 @@ import IconButton from '@material-ui/core/IconButton';
 import SearchIcon from '@material-ui/icons/Search';
 import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
+import Modal from '@material-ui/core/Modal';
+import Backdrop from '@material-ui/core/Backdrop';
+import Fade from '@material-ui/core/Fade';
+
+import SignIn from './SignUp-SignIn'
 
 const useStyles = makeStyles(theme => ({
   toolbar: {
@@ -28,6 +33,15 @@ const useStyles = makeStyles(theme => ({
 export default function Header(props) {
   const classes = useStyles();
   const { sections, title } = props;
+  const [open, setOpen] = React.useState(false);
+
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   return (
     <React.Fragment>
@@ -46,9 +60,26 @@ export default function Header(props) {
         <IconButton>
           <SearchIcon />
         </IconButton>
-        <Button variant="outlined" size="small">
+        <Button variant="outlined" size="small" onClick={ handleOpen }>
           Sign up
         </Button>
+        <Modal
+          aria-labelledby="transition-modal-title"
+          aria-describedby="transition-modal-description"
+          // className={classes.modal}
+          open={open}
+          onClose={handleClose}
+          closeAfterTransition
+          BackdropComponent={Backdrop}
+          BackdropProps={{
+            timeout: 500,
+          }}
+        >
+          <Fade in={open}>
+            <SignIn></SignIn>
+          </Fade>
+      </Modal>
+
       </Toolbar>
       <Toolbar component="nav" variant="dense" className={classes.toolbarSecondary}>
         {sections.map(section => (

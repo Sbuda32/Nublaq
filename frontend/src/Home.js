@@ -23,16 +23,16 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const sections = [
-  { title: 'Technology', url: '#' },
-  { title: 'Design', url: '#' },
-  { title: 'Culture', url: '#' },
-  { title: 'Business', url: '#' },
-  { title: 'Politics', url: '#' },
-  { title: 'Opinion', url: '#' },
-  { title: 'Science', url: '#' },
-  { title: 'Health', url: '#' },
-  { title: 'Style', url: '#' },
-  { title: 'Travel', url: '#' },
+  { title: 'About Us', url: '#' },
+  { title: 'Podcasts', url: '#' },
+  { title: 'Nublaq TV', url: '#' },
+  // { title: 'Social Commentary', url: '#' },
+  // { title: 'Store', url: '#' },
+  { title: 'Services', url: '#' },
+  // { title: 'Science', url: '#' },
+  // { title: 'Health', url: '#' },
+  // { title: 'Style', url: '#' },
+  // { title: 'Travel', url: '#' },
 ];
 
 const mainFeaturedPost = {
@@ -96,7 +96,7 @@ export default function Blog() {
     <React.Fragment>
       <CssBaseline />
       <Container maxWidth="lg">
-        <Header title="Blog" sections={sections} />
+        <Header title="Nublaq Africa" sections={sections} />
         <main>
           <MainFeaturedPost post={mainFeaturedPost} />
           <Grid container spacing={4}>
