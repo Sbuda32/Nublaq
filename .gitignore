@@ -1,1 +1,5 @@
 .vscode/
+gitignore/
+migrations/
+*.sqlite3
+__pycache__/
