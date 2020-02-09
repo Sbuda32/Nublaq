@@ -23,13 +23,13 @@ const useStyles = makeStyles({
     width: 160,
   },
 });
-
 export default function FeaturedPost(props) {
   const classes = useStyles();
   const { post } = props;
 
   return (
-    <Grid item xs={12} md={6}>
+    <Grid item xs={12} md={6}>import CardActionArea from '@material-ui/core/CardActionArea';
+
       <CardActionArea component="a" href="#">
         <Card className={classes.card}>
           <div className={classes.cardDetails}>{console.log(post)}
