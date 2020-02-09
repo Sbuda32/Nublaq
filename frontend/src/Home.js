@@ -97,6 +97,7 @@ export default function Home() {
   useEffect( () => {
       
       axios.get( 'http://127.0.0.1:8000/api/post/' ).then( res => {
+        console.log(res.data)
         setPost( res.data )
       } )
     }, [])
@@ -108,7 +109,7 @@ export default function Home() {
         <Header title="Nublaq Africa" sections={sections} />
         <main>
           <MainFeaturedPost post={mainFeaturedPost} />
-           {console.log(POST)}
+           {/* {console.log(POST)} */}
           <Grid container spacing={4}>
             {POST.map((post, index) => (
               
