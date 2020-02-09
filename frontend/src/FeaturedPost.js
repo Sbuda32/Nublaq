@@ -9,6 +9,9 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Hidden from '@material-ui/core/Hidden';
 
+// import Truncate from 'react-truncate';
+import Readmore from './Readmore'
+
 const useStyles = makeStyles({
   card: {
     display: 'flex',
@@ -29,7 +32,7 @@ export default function FeaturedPost(props) {
     <Grid item xs={12} md={6}>
       <CardActionArea component="a" href="#">
         <Card className={classes.card}>
-          <div className={classes.cardDetails}>
+          <div className={classes.cardDetails}>{console.log(post)}
             <CardContent>
               <Typography component="h2" variant="h5">
                 {post.title}
@@ -38,7 +41,9 @@ export default function FeaturedPost(props) {
                 {post.date}
               </Typography>
               <Typography variant="subtitle1" paragraph>
-                {post.description}
+                <Readmore lines={3} >
+                  {post.post_body}
+                </Readmore>
               </Typography>
               <Typography variant="subtitle1" color="primary">
                 Continue reading...

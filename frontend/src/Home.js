@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
@@ -15,6 +15,7 @@ import Footer from './Footer';
 import post1 from './blog-post.1.md';
 import post2 from './blog-post.2.md';
 import post3 from './blog-post.3.md';
+import axios from 'axios'
 
 const useStyles = makeStyles(theme => ({
   mainGrid: {
@@ -44,24 +45,24 @@ const mainFeaturedPost = {
   linkText: 'Continue reading…',
 };
 
-const featuredPosts = [
-  {
-    title: 'Featured post',
-    date: 'Nov 12',
-    description:
-      'This is a wider card with supporting text below as a natural lead-in to additional content.',
-    image: 'https://source.unsplash.com/random',
-    imageText: 'Image Text',
-  },
-  {
-    title: 'Post title',
-    date: 'Nov 11',
-    description:
-      'This is a wider card with supporting text below as a natural lead-in to additional content.',
-    image: 'https://source.unsplash.com/random',
-    imageText: 'Image Text',
-  },
-];
+// const featuredPosts = [
+//   {
+//     title: 'Featured post',
+//     date: 'Nov 12',
+//     description:
+//       'This is a wider card with supporting text below as a natural lead-in to additional content.',
+//     image: 'https://source.unsplash.com/random',
+//     imageText: 'Image Text',
+//   },
+//   {
+//     title: 'Post title',
+//     date: 'Nov 11',
+//     description:
+//       'This is a wider card with supporting text below as a natural lead-in to additional content.',
+//     image: 'https://source.unsplash.com/random',
+//     imageText: 'Image Text',
+//   },
+// ];
 
 const posts = [post1, post2, post3];
 
@@ -89,8 +90,16 @@ const sidebar = {
   ],
 };
 
-export default function Blog() {
+export default function Home() {
+  const [ POST, setPost ] = useState([])
   const classes = useStyles();
+
+  useEffect( () => {
+      
+      axios.get( 'http://127.0.0.1:8000/api/post/' ).then( res => {
+        setPost( res.data )
+      } )
+    }, [])
 
   return (
     <React.Fragment>
@@ -99,9 +108,12 @@ export default function Blog() {
         <Header title="Nublaq Africa" sections={sections} />
         <main>
           <MainFeaturedPost post={mainFeaturedPost} />
+           {console.log(POST)}
           <Grid container spacing={4}>
-            {featuredPosts.map(post => (
-              <FeaturedPost key={post.title} post={post} />
+            {POST.map((post, index) => (
+              
+              <FeaturedPost key={index} post={post} />
+              
             ))}
           </Grid>
           <Grid container spacing={5} className={classes.mainGrid}>
