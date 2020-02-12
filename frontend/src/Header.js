@@ -13,12 +13,23 @@ import Fade from '@material-ui/core/Fade';
 
 import SignIn from './SignUp-SignIn'
 
+import NublaqLogo from './NUBLAQ_ICON.png'
+import Image from 'material-ui-image'
+
+import styled from 'styled-components';
+
 const useStyles = makeStyles(theme => ({
   toolbar: {
     borderBottom: `1px solid ${theme.palette.divider}`,
+    paddingTop: '0px',
+    justifyContent: 'space-between',
   },
   toolbarTitle: {
     flex: 1,
+  },
+  logo: {
+    width: '20%',
+    position: 'relative',
   },
   toolbarSecondary: {
     justifyContent: 'space-between',
@@ -28,10 +39,17 @@ const useStyles = makeStyles(theme => ({
     padding: theme.spacing(1),
     flexShrink: 0,
   },
+  
 }));
 
+const ImageStyle = styled.img`
+  position: inherit;
+  width: 9%;
+  margin-left: 20%;
+`;
+
 export default function Header(props) {
-  const classes = useStyles();
+  const classes = useStyles(props);
   const { sections, title } = props;
   const [open, setOpen] = React.useState(false);
 
@@ -47,7 +65,7 @@ export default function Header(props) {
     <React.Fragment>
       <Toolbar className={classes.toolbar}>
         <Button size="small">Subscribe</Button>
-        <Typography
+        {/* <Typography
           component="h2"
           variant="h5"
           color="inherit"
@@ -56,7 +74,8 @@ export default function Header(props) {
           className={classes.toolbarTitle}
         >
           {title}
-        </Typography>
+        </Typography> */}
+        <ImageStyle src={NublaqLogo} className={classes.logo} />
         <IconButton>
           <SearchIcon />
         </IconButton>

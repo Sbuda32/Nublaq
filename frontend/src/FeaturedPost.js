@@ -28,8 +28,7 @@ export default function FeaturedPost(props) {
   const { post } = props;
 
   return (
-    <Grid item xs={12} md={6}>import CardActionArea from '@material-ui/core/CardActionArea';
-
+    <Grid item xs={12} md={6}>
       <CardActionArea component="a" href="#">
         <Card className={classes.card}>
           <div className={classes.cardDetails}>{console.log(post)}
