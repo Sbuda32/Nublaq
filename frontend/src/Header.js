@@ -32,7 +32,7 @@ const useStyles = makeStyles(theme => ({
     position: 'relative',
   },
   toolbarSecondary: {
-    justifyContent: 'space-between',
+    justifyContent: 'center',
     overflowX: 'auto',
   },
   toolbarLink: {
