@@ -41,7 +41,7 @@ import Truncate from 'react-truncate';
                     {children}
                 </Truncate>
                 {!truncated && expanded && (
-                    <span> <button href='#' onClick={toggleLines}>{less}</button></span>
+                    <span> <button onClick={toggleLines}>{less}</button></span>
                 )}
             </div>
         );

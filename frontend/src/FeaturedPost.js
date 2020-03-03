@@ -40,10 +40,10 @@ export default function FeaturedPost(props) {
                 {post.date}
               </Typography>
               
-                <Readmore lines={3} >
-                  {post.post_body}
-                </Readmore>
-                
+              <Readmore lines={3} >
+                {post.post_body}
+              </Readmore>
+
               <Typography variant="subtitle1" color="primary">
                 Continue reading...
               </Typography>
