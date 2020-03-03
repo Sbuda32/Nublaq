@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Truncate from 'react-truncate';
-import { Media } from 'reactstrap';
 
  function ReadMore( props ) {
 
@@ -34,7 +33,7 @@ import { Media } from 'reactstrap';
                     ellipsis={(
                         <React.Fragment>
                         <span>...</span>
-                        <a href="#" onClick={toggleLines}>{more}</a>
+                        <button onClick={toggleLines}>{more}</button>
                         </React.Fragment>
                     )}
                     onTruncate={handleTruncate}
@@ -42,7 +41,7 @@ import { Media } from 'reactstrap';
                     {children}
                 </Truncate>
                 {!truncated && expanded && (
-                    <span> <a href='#' onClick={toggleLines}>{less}</a></span>
+                    <span> <button href='#' onClick={toggleLines}>{less}</button></span>
                 )}
             </div>
         );

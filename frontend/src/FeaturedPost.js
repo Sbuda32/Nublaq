@@ -39,11 +39,11 @@ export default function FeaturedPost(props) {
               <Typography variant="subtitle1" color="textSecondary">
                 {post.date}
               </Typography>
-              <Typography variant="subtitle1" paragraph>
+              
                 <Readmore lines={3} >
                   {post.post_body}
                 </Readmore>
-              </Typography>
+                
               <Typography variant="subtitle1" color="primary">
                 Continue reading...
               </Typography>
