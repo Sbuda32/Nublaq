@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 
 import { makeStyles } from '@material-ui/core/styles';
 import Avatar from '@material-ui/core/Avatar';
@@ -30,10 +30,17 @@ const useStyles = makeStyles({
         marginLeft: "50px",
         marginTop: "-34px",
     },
+    articleImageContainer: {
+        height: "40%",
+        margin: "0 auto",
+    },
     articleImage: {
-        backgroundImage: "url(https://source.unsplash.com/random)",
-        height: "200px",
+        height: "220px",
+        width: "100%",
         marginTop: "18px",
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
     },
     articleTitle: {
         lineHeight: "4.235rem",
@@ -44,40 +51,34 @@ const useStyles = makeStyles({
     },
     authorArticleInfo: {
         marginTop: "36px",
+        marginRight: "45px",
         display: "grid",
-        justifyContent: "center",
+        justifyContent: "end",
+    },
+    reactMD: {
+        width: "80%",
+        marginLeft: "auto",
     }
 
 })
 
 function Article() {
     const classes = useStyles();
-    const [ md, setMd ] = useState({ articleText: "" });
-
-    useEffect( () => {
-
-        fetch( post1 ).then( (res) => {
-            res.text()
-
-        } ).then( ( markDownText ) => {
-            setMd( { ...md, markDownText} );
-        } )
-
-    }, [] )
 
     return (
         <React.Fragment>
             <hr/>
 
-            <Paper className={classes.articleImage} style={{backgroundImage: ''}}>
+            <div className={classes.articleImageContainer}>
+            <Paper className={classes.articleImage} style={{ backgroundImage: "url(https://source.unsplash.com/random)" }} >
+                { <img src="https://source.unsplash.com/random" style={{ display: "none" }} /> }
+                <div className={classes.overlay} />
             </Paper>
+            </div>
 
-            {/* <Typography variant="h4" className={classes.articleTitle}>
-                Title of Article
-            </Typography> */}
-
-           
-                <ReactMD fileName={ post1 } />
+           <div className={ classes.reactMD }>
+            <ReactMD fileName={ post1 } />
+            </div>
 
             <div className={classes.authorArticleInfo} >
                 <Avatar alt="author picture" src="/Nublaq/frontend/public/logo512.png" />
