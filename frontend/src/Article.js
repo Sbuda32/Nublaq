@@ -71,7 +71,7 @@ function Article() {
 
             <div className={classes.articleImageContainer}>
             <Paper className={classes.articleImage} style={{ backgroundImage: "url(https://source.unsplash.com/random)" }} >
-                { <img src="https://source.unsplash.com/random" style={{ display: "none" }} /> }
+                {/* { <img src="https://source.unsplash.com/random" style={{ display: "none" }} /> } */}
                 <div className={classes.overlay} />
             </Paper>
             </div>

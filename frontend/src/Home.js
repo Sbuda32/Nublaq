@@ -9,9 +9,10 @@ import Header from './Header';
 import Footer from './Footer';
 import MainHome from './MainHome';
 import Article from './Article';
+import About_Us from './About_Us';
 
 const sections = [
-  { title: 'About Us', url: '#' },
+  { title: 'About Us', url: '/about-us' },
   { title: 'Podcasts', url: '#' },
   { title: 'Nublaq TV', url: '#' },
   // { title: 'Social Commentary', url: '#' },
@@ -41,6 +42,7 @@ export default function Home() {
           <Switch>
             <Route path='/' component={MainHome} exact />
             <Route path='/article' component={Article} />
+            <Route path='/about-us' component={About_Us} />
           </Switch>
         </main>
       </Container>
