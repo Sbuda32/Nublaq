@@ -28,17 +28,24 @@ const useStyles = makeStyles({
     },
     twoPicsWithText: {
         height: "90vh",
+        display: "flex",
+        flexWrap: "wrap-reverse",
+        marginTop: "6%",
+        justifyContent: "space-between"
     },
     leftImage: {
         height: "inherit",
+        width: "50%",
         backgroundRepeat: "no-repeat",
+        backgroundSize: "contain",
     },
     rightImage: {
         height: "inherit",
         backgroundRepeat: "no-repeat",
-        float: "right",
         width: "578px",
         marginTop: "-57.9%",
+        backgroundSize: "contain",
+        margin: "1em",
     }
 
 })
