@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactMarkdown from 'markdown-to-jsx';
+// import ReactMarkdown from 'markdown-to-jsx';
 import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
@@ -37,6 +37,6 @@ const options = {
   },
 };
 
-export default function Markdown(props) {
-  return <ReactMarkdown options={options} {...props} />;
-}
+// export default function Markdown(props) {
+//   return <ReactMarkdown options={options} {...props} />;
+// }

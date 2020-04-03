@@ -29,7 +29,7 @@ export default function FeaturedPost(props) {
 
   return (
     <Grid item xs={12} md={6}>
-      <CardActionArea component="a" href="#">
+      <CardActionArea component="a" href="/article">
         <Card className={classes.card}>
           <div className={classes.cardDetails}>{console.log(post)}
             <CardContent>
@@ -39,11 +39,11 @@ export default function FeaturedPost(props) {
               <Typography variant="subtitle1" color="textSecondary">
                 {post.date}
               </Typography>
-              <Typography variant="subtitle1" paragraph>
-                <Readmore lines={3} >
-                  {post.post_body}
-                </Readmore>
-              </Typography>
+              
+              <Readmore lines={3} >
+                {post.post_body}
+              </Readmore>
+
               <Typography variant="subtitle1" color="primary">
                 Continue reading...
               </Typography>
