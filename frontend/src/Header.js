@@ -1,41 +1,45 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import { makeStyles } from '@material-ui/core/styles';
-import Toolbar from '@material-ui/core/Toolbar';
-import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import SearchIcon from '@material-ui/icons/Search';
-import Typography from '@material-ui/core/Typography';
-import Link from '@material-ui/core/Link';
-import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
+import Toolbar from '@material-ui/core/Toolbar';
+import Button from '@material-ui/core/Button';
+import Modal from '@material-ui/core/Modal';
+import Link from '@material-ui/core/Link';
 import Fade from '@material-ui/core/Fade';
 
 import SignIn from './SignUp-SignIn'
 
 import NublaqLogo from './NUBLAQ_ICON.png'
-import Image from 'material-ui-image'
 
 import styled from 'styled-components';
 
 const useStyles = makeStyles(theme => ({
   toolbar: {
+
     borderBottom: `1px solid ${theme.palette.divider}`,
     paddingTop: '0px',
     justifyContent: 'space-between',
   },
   toolbarTitle: {
+
     flex: 1,
   },
   logo: {
+
     width: '20%',
     position: 'relative',
   },
   toolbarSecondary: {
-    justifyContent: 'space-between',
+
+    justifyContent: 'center',
     overflowX: 'auto',
   },
   toolbarLink: {
+
     padding: theme.spacing(1),
     flexShrink: 0,
   },
@@ -50,14 +54,16 @@ const ImageStyle = styled.img`
 
 export default function Header(props) {
   const classes = useStyles(props);
-  const { sections, title } = props;
+  const { sections } = props;
   const [open, setOpen] = React.useState(false);
 
   const handleOpen = () => {
+
     setOpen(true);
   };
 
   const handleClose = () => {
+    
     setOpen(false);
   };
 
@@ -65,16 +71,6 @@ export default function Header(props) {
     <React.Fragment>
       <Toolbar className={classes.toolbar}>
         <Button size="small">Subscribe</Button>
-        {/* <Typography
-          component="h2"
-          variant="h5"
-          color="inherit"
-          align="center"
-          noWrap
-          className={classes.toolbarTitle}
-        >
-          {title}
-        </Typography> */}
         <ImageStyle src={NublaqLogo} className={classes.logo} />
         <IconButton>
           <SearchIcon />
@@ -85,7 +81,6 @@ export default function Header(props) {
         <Modal
           aria-labelledby="transition-modal-title"
           aria-describedby="transition-modal-description"
-          // className={classes.modal}
           open={open}
           onClose={handleClose}
           closeAfterTransition
