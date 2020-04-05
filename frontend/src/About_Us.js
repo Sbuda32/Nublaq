@@ -31,21 +31,23 @@ const useStyles = makeStyles({
         display: "flex",
         flexWrap: "wrap-reverse",
         marginTop: "6%",
-        justifyContent: "space-between"
+        justifyContent: "space-between",
+        overflow: "hidden",
     },
     leftImage: {
         height: "inherit",
-        width: "50%",
+        width: "33.3%",
         backgroundRepeat: "no-repeat",
         backgroundSize: "contain",
     },
     rightImage: {
         height: "inherit",
         backgroundRepeat: "no-repeat",
-        width: "578px",
+        width: "33.3%",
         marginTop: "-57.9%",
-        backgroundSize: "contain",
-        margin: "1em",
+        backgroundSize: "cover",
+        flex: "1",
+        left: "6%",
     }
 
 })
@@ -81,6 +83,7 @@ function About_Us() {
                 className={ classes.twoPicsWithText }
             >
                 <div className={ classes.leftImage } style={{ backgroundImage: "url(https://images.unsplash.com/photo-1559628129-67cf63b72248?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80)" }} ></div>
+                <div className={ classes.leftImage } ></div>
                 <div className={ classes.rightImage } style={{ backgroundImage: "url(https://images.unsplash.com/photo-1527068589345-b736a7de9cc2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" }} ></div>
             </Paper>
         </React.Fragment>
