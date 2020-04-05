@@ -38,7 +38,7 @@ const useStyles = makeStyles({
         height: "inherit",
         width: "33.3%",
         backgroundRepeat: "no-repeat",
-        backgroundSize: "contain",
+        backgroundSize: "cover",
     },
     rightImage: {
         height: "inherit",
