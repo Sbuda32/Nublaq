@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Truncate from 'react-truncate';
-import { Media } from 'reactstrap';
+// import { Media } from 'reactstrap';
 
  function ReadMore( props ) {
 
