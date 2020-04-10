@@ -172,6 +172,14 @@ function About_Us() {
                     ))}
                 </GridList>
             </Paper>
+            
+            <center>
+                <Typography
+                    className={ classes.title }
+                >
+                    Aute aliqua non excepteur aute.Id reprehenderit velit excepteur qui adipisicing.Labore ex ipsum pariatur culpa amet commodo qui nostrud ex voluptate dolore elit ipsum velit.Ut commodo ea minim magna.Incididunt excepteur in laborum eiusmod anim velit esse.Ipsum eu dolore officia aute qui nisi enim nisi velit duis ea labore occaecat.
+                </Typography>
+            </center>
         </React.Fragment>
     )
 }
